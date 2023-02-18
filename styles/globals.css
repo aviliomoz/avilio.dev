@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient {
+  background: conic-gradient(
+    rgba(76, 42, 133, 1) 0%,
+    rgba(107, 127, 215, 1) 25%,
+    rgba(188, 237, 246, 1) 50%,
+    rgba(221, 251, 210, 1) 75%,
+    rgba(76, 42, 133, 1) 100%
+  );
+
+  animation-duration: 20s;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+.move-arrow {
+  animation: move 0.8s infinite alternate;
+}
+
+.link {
+  font-weight: 600;
+}

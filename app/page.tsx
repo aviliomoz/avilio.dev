@@ -1,91 +1,50 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import { ArrowLink } from "@/components/ArrowLink";
+import { ProfilePhoto } from "@/components/ProfilePhoto";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
+    <section>
+      <div className="flex items-center space-x-5">
+        <ProfilePhoto />
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <h1 className="text-4xl font-bold">Avilio Muñoz</h1>
+          <p className="text-stone-700">Frontend Web Developer</p>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
+      <div className="flex flex-col space-y-3 mt-8">
+        <p className="leading-7 text-stone-700">
+          Frontend developer, UX architect and Javascript engineer,{" "}
+          <Link href="#" className="link">
+            Photochromic Lens
+          </Link>{" "}
+          enthusiast, practicing minimalist, and{" "}
+          <Link href="#" className="link">
+            Pop Music & Jazz
+          </Link>{" "}
+          lover in search of flow.
+        </p>
+        <p className="leading-7 text-stone-700">
+          Working with my hands to make magic happen on the internet. View my{" "}
+          <Link href="#" className="link">
+            Projects
+          </Link>
+          ,{" "}
+          <Link href="#" className="link">
+            Articles
+          </Link>
+          ,{" "}
+          <Link href="#" className="link">
+            Resume
+          </Link>
+          ,{" "}
+          <Link href="#" className="link">
+            Contact Me
+          </Link>
+          , or send me an email at hellocodewonders@gmail.com.
+        </p>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      <ArrowLink text="Lets see my projects" path="/projects" />
+    </section>
+  );
 }
