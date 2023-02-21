@@ -3,29 +3,30 @@
     "name": "wasavi",
     "github_url": "https://github.com",
     "url": "https://github.com",
-    "description_small": "Recipe and inventory management app for restaurants.",
+    "description_small": "Recipe and inventory manager for restaurants.",
     "description_large": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore temporibus quam, nam ipsum, praesentium nihil distinctio qui quidem expedita vero laborum ullam culpa, cupiditate autem vel voluptas. Consectetur, dolorum ad.",
-    "image": "/supabase.svg",
+    "logo": "/supabase.svg",
+    "cover": "/layout.png",
     "tags": ["react", "supabase", "tailwind"],
     "features": [
       {
         "name": "Feature 1",
-        "image": "/public/layout.png",
+        "image": "/layout.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore temporibus quam, nam ipsum, praesentium nihil distinctio qui quidem expedita vero laborum ullam culpa."
       },
       {
         "name": "Feature 2",
-        "image": "/public/layout.png",
+        "image": "/layout.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore temporibus quam, nam ipsum, praesentium nihil distinctio qui quidem expedita vero laborum ullam culpa."
       },
       {
         "name": "Feature 3",
-        "image": "/public/layout.png",
+        "image": "/layout.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore temporibus quam, nam ipsum, praesentium nihil distinctio qui quidem expedita vero laborum ullam culpa."
       },
       {
         "name": "Feature 4",
-        "image": "/public/layout.png",
+        "image": "/layout.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore temporibus quam, nam ipsum, praesentium nihil distinctio qui quidem expedita vero laborum ullam culpa."
       }
     ]
@@ -36,27 +37,28 @@
     "url": "https://github.com",
     "description_small": "BCG Chart generator with spreadsheet imports.",
     "description_large": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore temporibus quam, nam ipsum, praesentium nihil distinctio qui quidem expedita vero laborum ullam culpa, cupiditate autem vel voluptas. Consectetur, dolorum ad.",
-    "image": "/supabase.svg",
+    "logo": "/supabase.svg",
+    "cover": "/layout.png",
     "tags": ["react", "tailwind"],
     "features": [
       {
         "name": "Feature 1",
-        "image": "/public/layout.png",
+        "image": "/layout.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore temporibus quam, nam ipsum, praesentium nihil distinctio qui quidem expedita vero laborum ullam culpa."
       },
       {
         "name": "Feature 2",
-        "image": "/public/layout.png",
+        "image": "/layout.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore temporibus quam, nam ipsum, praesentium nihil distinctio qui quidem expedita vero laborum ullam culpa."
       },
       {
         "name": "Feature 3",
-        "image": "/public/layout.png",
+        "image": "/layout.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore temporibus quam, nam ipsum, praesentium nihil distinctio qui quidem expedita vero laborum ullam culpa."
       },
       {
         "name": "Feature 4",
-        "image": "/public/layout.png",
+        "image": "/layout.png",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore temporibus quam, nam ipsum, praesentium nihil distinctio qui quidem expedita vero laborum ullam culpa."
       }
     ]

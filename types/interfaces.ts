@@ -22,7 +22,8 @@ export interface Project {
   url: string;
   description_small: string;
   description_large: string;
-  image: string;
+  logo: string;
+  cover: string;
   tags: string[];
   features: Feature[];
 }

@@ -9,7 +9,7 @@ export default async function ProjectsPage() {
   return (
     <section>
       <h1 className="font-bold text-3xl mb-8 pb-4 border-b">Projects</h1>
-      <div className="w-full flex space-x-1">
+      <div className="w-full grid grid-cols-2 gap-2">
         {projects.map((project, index) => {
           return <ProjectCard key={index} project={project} />;
         })}

@@ -1,44 +1,28 @@
-import { RiCalendarEventFill } from "react-icons/ri";
-
 interface Props {
   url: string;
   title: string;
   description: string;
   published_at: string;
-  tag_list: string[];
 }
 
 export const ArticleCard = ({
   url,
   title,
   published_at,
-  tag_list,
 }: Props) => {
   return (
     <a
       href={url}
       target="_blank"
-      className="p-2 mb-2 border border-white hover:border-gray-200 rounded-md"
+      className="group flex justify-between items-center mb-4"
     >
-      <h2 className="font-semibold text-xl">{title}</h2>
-      <div className="flex space-x-6 items-center pt-2">
-        <div className="flex space-x-2 items-center text-gray-500 text-sm">
-          <RiCalendarEventFill />
-          <span>{new Date(published_at).toLocaleDateString()}</span>
-        </div>
-        <ul className="flex space-x-4">
-          {tag_list.map((tag, index) => {
-            return (
-              <li
-                className="bg-gray-100 py-0.5 px-2 rounded-lg text-xs"
-                key={index}
-              >
-                {tag}
-              </li>
-            );
-          })}
-        </ul>
+      <div className="flex">
+        <div className="w-0 group-hover:w-1 group-hover:mr-2 transition-all bg-gray-200 rounded-md"></div>
+        <h2 className="font-normal group-hover:font-medium text-lg">{title}</h2>
       </div>
+      <span className="text-gray-500 text-sm">
+        {new Date(published_at).toLocaleDateString()}
+      </span>
     </a>
   );
 };
