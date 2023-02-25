@@ -3,6 +3,8 @@ import { getProjectByName, getProjects } from "@/utils/projects";
 import Image from "next/image";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+
 // Icons
 import { VscGithub } from "react-icons/vsc";
 import { BsArrowLeft } from "react-icons/bs";
@@ -14,10 +16,19 @@ interface Props {
   };
 }
 
-export async function generateStaticParams() {
-  const projects = await getProjects();
+export async function generateMetadata({
+  params: { name },
+}: Props): Promise<Metadata> {
+  const project = await getProjectByName(name);
 
-  return projects.map((project) => ({ name: project.name }));
+  const projectNameCapitalLetter = project?.name.charAt(0).toUpperCase() || "";
+  const projectNameRest = project?.name.slice(1) || "";
+  const projectName = projectNameCapitalLetter + projectNameRest;
+
+  return {
+    title: `Project: ${projectName} | Avilio Muñoz`,
+    description: project?.description_small,
+  };
 }
 
 export default async function ProjectPage({ params: { name } }: Props) {
@@ -38,7 +49,7 @@ export default async function ProjectPage({ params: { name } }: Props) {
             className="flex items-center space-x-2"
           >
             <VscGithub />
-            <span>View code</span>
+            <span className="hidden sm:block">View code</span>
           </a>
           <a
             href={project.url}
@@ -46,11 +57,11 @@ export default async function ProjectPage({ params: { name } }: Props) {
             className="flex items-center space-x-2"
           >
             <HiOutlineExternalLink />
-            <span>Visit project</span>
+            <span className="hidden sm:block">Visit project</span>
           </a>
         </div>
       </div>
-      <div className="flex space-x-12">
+      <div className="flex md:space-x-12 md:flex-row flex-col space-y-6 md:space-y-0">
         <Image
           src={project.cover}
           width={350}
@@ -79,7 +90,7 @@ export default async function ProjectPage({ params: { name } }: Props) {
         </div>
       </div>
       <h2 className="text-center font-semibold text-xl mt-14 mb-8">Features</h2>
-      <div className="grid grid-cols-2 gap-x-10 gap-y-14 p-10 border rounded-md">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-10 md:gap-y-14 p-4 md:p-10 border rounded-md">
         {project.features.map((feature, index) => {
           return <FeatureCard key={index} feature={feature} />;
         })}
@@ -96,7 +107,7 @@ export default async function ProjectPage({ params: { name } }: Props) {
             className="flex items-center space-x-2"
           >
             <VscGithub />
-            <span>View code</span>
+            <span className="hidden sm:block">View code</span>
           </a>
           <a
             href={project.url}
@@ -104,7 +115,7 @@ export default async function ProjectPage({ params: { name } }: Props) {
             className="flex items-center space-x-2"
           >
             <HiOutlineExternalLink />
-            <span>Visit project</span>
+            <span className="hidden sm:block">Visit project</span>
           </a>
         </div>
       </div>

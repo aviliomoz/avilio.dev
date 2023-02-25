@@ -4,11 +4,10 @@
 
 .gradient {
   background: conic-gradient(
-    rgba(76, 42, 133, 1) 0%,
-    rgba(107, 127, 215, 1) 25%,
-    rgba(188, 237, 246, 1) 50%,
-    rgba(221, 251, 210, 1) 75%,
-    rgba(76, 42, 133, 1) 100%
+    #9DC08B 0%,
+    #9DC08B 40%,
+    #609966 80%,
+    #9DC08B 100%
   );
 
   animation-duration: 20s;
@@ -24,7 +23,7 @@
 }
 
 .move-arrow {
-  animation: move 0.8s infinite alternate;
+  animation: move 0.5s infinite alternate;
 }
 
 .link {

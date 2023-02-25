@@ -1,10 +1,10 @@
 import "../styles/globals.css";
-import { Rubik } from "@next/font/google";
+import { Roboto_Slab } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-const rubik = Rubik({
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+const roboto = Roboto_Slab({
+  weight: ["400", "500", "700", "800"],
   style: "normal",
   display: "swap",
   subsets: ["latin"],
@@ -16,9 +16,9 @@ interface Props {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang="en" className={rubik.className}>
+    <html lang="en" className={roboto.className}>
       <head />
-      <body className="max-w-5xl px-28 mx-auto text-gray-800">
+      <body className="max-w-5xl px-8 sm:px-28 mx-auto text-gray-800">
         <Header />
         <main className="min-h-[50svh]">{children}</main>
         <Footer />

@@ -7,7 +7,7 @@ interface Props {
 
 export const FeatureCard = ({ feature }: Props) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mb-10 sm:mb-0">
       <picture className="relative w-full h-48 rounded-md overflow-hidden">
         <Image src={feature.image} alt={feature.name} fill />
       </picture>

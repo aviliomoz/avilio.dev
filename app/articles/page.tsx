@@ -1,6 +1,13 @@
-import { ArrowLink } from "@/components/ArrowLink";
+// import { ArrowLink } from "@/components/ArrowLink";
 import { ArticleCard } from "@/components/ArticleCard";
 import { getArticles } from "@/utils/articles";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Articles | Avilio Muñoz",
+  description: "Avilio Muñoz's portfolio articles page",
+};
 
 export default async function ArticlesPage() {
   const articles: any[] = await getArticles();
@@ -21,7 +28,7 @@ export default async function ArticlesPage() {
           );
         })}
       </div>
-      <ArrowLink text="Contact me" path="/contact" />
+      {/* <ArrowLink text="See my projects" path="/projects" /> */}
     </section>
   );
 }

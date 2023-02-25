@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 export const ProfilePhoto = () => {
   return (
-    <div className="w-20 h-20 rounded-full flex justify-center items-center gradient animate-spin">
-      <div className="w-[72px] h-[72px] rounded-full bg-white flex justify-center items-center">
-        <div className="w-16 h-16 rounded-full bg-stone-800 flex justify-center items-center"></div>
-      </div>
+    <div className="w-[70px] h-[70px] p-1 rounded-full flex justify-center items-center border">
+      <picture className="w-full h-full rounded-full bg-gray-800 flex relative overflow-hidden">
+        <Image src="/zeno.png" fill alt="profile photo" className="grayscale"/>
+      </picture>
     </div>
   );
 };

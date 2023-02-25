@@ -16,8 +16,8 @@ export const ArticleCard = ({
       target="_blank"
       className="group flex justify-between items-center mb-4"
     >
-      <div className="flex">
-        <div className="w-0 group-hover:w-1 group-hover:mr-2 transition-all bg-gray-200 rounded-md"></div>
+      <div className="flex pr-10">
+        <div className="w-0 group-hover:w-0.5 group-hover:mr-2 transition-all bg-gray-200 rounded-md"></div>
         <h2 className="font-normal group-hover:font-medium text-lg">{title}</h2>
       </div>
       <span className="text-gray-500 text-sm">

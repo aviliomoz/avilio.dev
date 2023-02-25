@@ -2,13 +2,20 @@ import { ArrowLink } from "@/components/ArrowLink";
 import { ProfilePhoto } from "@/components/ProfilePhoto";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Avilio Muñoz",
+  description: "Avilio Muñoz's portfolio home page",
+};
+
 export default function Home() {
   return (
     <section>
       <div className="flex items-center space-x-5">
         <ProfilePhoto />
         <div>
-          <h1 className="text-4xl font-bold">Avilio Muñoz</h1>
+          <h1 className="text-2xl sm:text-4xl font-bold">Avilio Muñoz</h1>
           <p className="text-stone-700">Frontend Web Developer</p>
         </div>
       </div>
