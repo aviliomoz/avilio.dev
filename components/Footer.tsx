@@ -33,9 +33,12 @@ export const Footer = () => {
           );
         })}
       </ul>
-      <button className="bg-gray-50 py-1 px-4 flex items-center justify-center rounded-md border hover:bg-gray-100 transition-all">
+      <a
+        href="mailto:aviliomuoz@gmail.com"
+        className="bg-gray-50 py-1 px-4 flex items-center justify-center rounded-md border hover:bg-gray-100 transition-all"
+      >
         Send me a message
-      </button>
+      </a>
     </footer>
   );
 };

@@ -61,18 +61,19 @@ export default async function ProjectPage({ params: { name } }: Props) {
           </a>
         </div>
       </div>
-      <div className="flex md:space-x-12 md:flex-row flex-col space-y-6 md:space-y-0">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <picture className="w-full h-52 sm:h-80 md:h-96 lg:h-64 relative">
         <Image
           src={project.cover}
-          width={350}
-          height={200}
+          fill
           alt="Cover image"
           className="rounded-md"
         />
+        </picture>
         <div className="flex flex-col justify-center w-full">
           <h2 className="font-semibold text-xl mb-4">Description</h2>
           <p>{project.description_large}</p>
-          <div className="flex items-center space-x-4 mt-6">
+          <div className="flex flex-col gap-4 sm:flex-row items-center mt-6">
             <h3 className="font-medium">Stack:</h3>
             <div className="flex items-center space-x-2">
               {project.tags.map((tag, index) => {
