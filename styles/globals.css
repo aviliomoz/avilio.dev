@@ -4,10 +4,10 @@
 
 .gradient {
   background: conic-gradient(
-    #9DC08B 0%,
-    #9DC08B 40%,
+    #9dc08b 0%,
+    #9dc08b 40%,
     #609966 80%,
-    #9DC08B 100%
+    #9dc08b 100%
   );
 
   animation-duration: 20s;
@@ -28,4 +28,8 @@
 
 .link {
   font-weight: 600;
+}
+
+* {
+  color: #374151;
 }

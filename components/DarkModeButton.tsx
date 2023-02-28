@@ -10,10 +10,14 @@ export const DarkModeButton = () => {
 
   return (
     <button
-      className="bg-gray-50 w-8 h-8 flex items-center justify-center rounded-md border hover:bg-gray-100 transition-all"
+      className="group bg-gray-50 w-8 h-8 flex items-center justify-center rounded-md border hover:bg-gray-100"
       onClick={() => setDarkMode(!darkMode)}
     >
-      {darkMode ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
+      {darkMode ? (
+        <MdOutlineLightMode className="group-hover:fill-gray-800" />
+      ) : (
+        <MdOutlineDarkMode className="group-hover:fill-gray-800" />
+      )}
     </button>
   );
 };

@@ -27,7 +27,7 @@ export const Footer = () => {
           return (
             <li key={index}>
               <a className="text-lg" href={social.path} target="_blank">
-                <social.icon />
+                <social.icon className="hover:fill-gray-800 transition-all" />
               </a>
             </li>
           );
@@ -35,7 +35,7 @@ export const Footer = () => {
       </ul>
       <a
         href="mailto:aviliomuoz@gmail.com"
-        className="bg-gray-50 py-1 px-4 flex items-center justify-center rounded-md border hover:bg-gray-100 transition-all"
+        className="bg-gray-50 py-1 px-4 flex items-center justify-center rounded-md border hover:bg-gray-100 hover:text-gray-800 transition-all"
       >
         Send me a message
       </a>

@@ -1,7 +1,6 @@
 import { ArrowLink } from "@/components/ArrowLink";
 import { ProfilePhoto } from "@/components/ProfilePhoto";
 import Link from "next/link";
-
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,12 +14,12 @@ export default function Home() {
       <div className="flex items-center space-x-5">
         <ProfilePhoto />
         <div>
-          <h1 className="text-2xl sm:text-4xl font-bold">Avilio Muñoz</h1>
-          <p className="text-stone-700">Frontend Web Developer</p>
+          <h1 className="text-2xl sm:text-4xl font-bold text-gray-800">Avilio Muñoz</h1>
+          <p className="text-gray-800">Frontend Web Developer</p>
         </div>
       </div>
       <div className="flex flex-col space-y-3 mt-8">
-        <p className="leading-7 text-stone-700">
+        <p className="leading-7">
           Frontend developer, UX architect and Javascript engineer,{" "}
           <Link href="#" className="link">
             Photochromic Lens
@@ -31,7 +30,7 @@ export default function Home() {
           </Link>{" "}
           lover in search of flow.
         </p>
-        <p className="leading-7 text-stone-700">
+        <p className="leading-7">
           Working with my hands to make magic happen on the internet. View my{" "}
           <Link href="#" className="link">
             Projects

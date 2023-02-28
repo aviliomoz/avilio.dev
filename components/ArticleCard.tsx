@@ -5,11 +5,7 @@ interface Props {
   published_at: string;
 }
 
-export const ArticleCard = ({
-  url,
-  title,
-  published_at,
-}: Props) => {
+export const ArticleCard = ({ url, title, published_at }: Props) => {
   return (
     <a
       href={url}
@@ -18,7 +14,9 @@ export const ArticleCard = ({
     >
       <div className="flex pr-10">
         <div className="w-0 group-hover:w-0.5 group-hover:mr-2 transition-all bg-gray-200 rounded-md"></div>
-        <h2 className="font-normal group-hover:font-medium text-lg">{title}</h2>
+        <h2 className="font-normal group-hover:font-medium text-lg group-hover:text-gray-800">
+          {title}
+        </h2>
       </div>
       <span className="text-gray-500 text-sm">
         {new Date(published_at).toLocaleDateString()}

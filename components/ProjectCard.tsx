@@ -13,13 +13,13 @@ export const ProjectCard = ({ project }: Props) => {
   return (
     <Link
       href={`/projects/${project.name}`}
-      className="w-full rounded-md p-4 border border-gray-200 group hover:shadow-md transition-all"
+      className="w-full rounded-md p-6 border border-gray-200 group hover:shadow-md transition-all"
     >
       <div className="flex space-x-2 items-center">
         <picture className="w-6 h-6 flex items-center justify-center relative">
           <Image src={project.logo} alt={project.name} fill />
         </picture>
-        <h2 className="text-2xl font-bold">
+        <h2 className="text-2xl font-bold text-gray-800">
           {project.name.charAt(0).toUpperCase() + project.name.slice(1)}
         </h2>
       </div>
