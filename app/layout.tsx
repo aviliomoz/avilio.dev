@@ -18,7 +18,7 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="en" className={roboto.className}>
       <head />
-      <body className="max-w-5xl px-8 sm:px-28 mx-auto text-gray-800">
+      <body className="max-w-5xl px-8 sm:px-28 mx-auto text-gray-800 dark:bg-gray-900">
         <Header />
         <main className="min-h-[50svh]">{children}</main>
         <Footer />

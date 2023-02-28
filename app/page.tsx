@@ -14,12 +14,16 @@ export default function Home() {
       <div className="flex items-center space-x-5">
         <ProfilePhoto />
         <div>
-          <h1 className="text-2xl sm:text-4xl font-bold text-gray-800">Avilio Muñoz</h1>
-          <p className="text-gray-800">Frontend Web Developer</p>
+          <h1 className="text-2xl sm:text-4xl font-bold text-gray-800 dark:text-white">
+            Avilio Muñoz
+          </h1>
+          <p className="text-gray-800 dark:text-white">
+            Frontend Web Developer
+          </p>
         </div>
       </div>
       <div className="flex flex-col space-y-3 mt-8">
-        <p className="leading-7">
+        <p className="leading-7 dark:text-white">
           Frontend developer, UX architect and Javascript engineer,{" "}
           <Link href="#" className="link">
             Photochromic Lens
@@ -30,7 +34,7 @@ export default function Home() {
           </Link>{" "}
           lover in search of flow.
         </p>
-        <p className="leading-7">
+        <p className="leading-7 dark:text-white">
           Working with my hands to make magic happen on the internet. View my{" "}
           <Link href="#" className="link">
             Projects

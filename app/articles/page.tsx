@@ -14,7 +14,9 @@ export default async function ArticlesPage() {
 
   return (
     <section>
-      <h1 className="font-bold text-3xl mb-8 pb-4 border-b text-gray-800">Articles</h1>
+      <h1 className="font-bold text-3xl mb-8 pb-4 border-b text-gray-800 dark:text-white">
+        Articles
+      </h1>
       <div className="flex flex-col">
         {articles.map(({ id, url, title, description, published_at }) => {
           return (

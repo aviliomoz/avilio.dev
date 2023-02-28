@@ -14,8 +14,8 @@ export const ArrowLink = ({ text, path }: Props) => {
       href={path}
       className="flex space-x-3 items-center mt-10 mb-8 sm:mt-16"
     >
-      <span>{text}</span>
-      <BsArrowRight className="move-arrow text-lg" />
+      <span className="dark:text-white">{text}</span>
+      <BsArrowRight className="move-arrow text-lg dark:fill-white" />
     </Link>
   );
 };

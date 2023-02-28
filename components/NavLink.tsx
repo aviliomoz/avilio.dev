@@ -26,14 +26,14 @@ export const NavLink = ({ route }: Props) => {
         pathname && pathname === route.path
           ? "font-extrabold text-gray-800"
           : "hover:text-gray-800"
-      } relative`}
+      } relative dark:text-white dark:hover:text-white`}
       href={route.path}
       target={route.path === "/resume.pdf" ? "_blank" : "_self"}
     >
       {pathname && pathname === route.path && (
         <motion.span
           layoutId="underline"
-          className="absolute bg-gray-800 w-full h-[1.5px] rounded-sm top-full mt-0.5 hidden sm:block"
+          className="absolute bg-gray-800 w-full h-[1.5px] rounded-sm top-full mt-0.5 hidden sm:block dark:bg-white"
         />
       )}
       {route.name}
