@@ -1,17 +1,12 @@
 import type { Project } from "@/types/interfaces";
+import projects from "@/data/projects.json";
 
-const api_route = "http://localhost:3000/api/projects";
-
-export const getProjects = async (): Promise<Project[]> => {
-  const data = await fetch(api_route);
-  const projects: Project[] = await data.json();
-
+export const getProjects = (): Project[] => {
   return projects;
 };
 
-export const getProjectByName = async (name: string): Promise<Project> => {
-  const data = await fetch(api_route + `/${name}`);
-  const project: Project = await data.json();
+export const getProjectByName = (name: string): Project | undefined => {
+  const project = projects.find((project) => project.name === name);
 
   return project;
 };

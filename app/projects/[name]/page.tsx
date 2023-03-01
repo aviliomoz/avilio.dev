@@ -19,15 +19,15 @@ interface Props {
 export async function generateMetadata({
   params: { name },
 }: Props): Promise<Metadata> {
-  const project = await getProjectByName(name);
+  const project = getProjectByName(name);
 
-  const projectNameCapitalLetter = project.name.charAt(0).toUpperCase() || "";
-  const projectNameRest = project.name.slice(1) || "";
+  const projectNameCapitalLetter = project?.name.charAt(0).toUpperCase() || "";
+  const projectNameRest = project?.name.slice(1) || "";
   const projectName = projectNameCapitalLetter + projectNameRest;
 
   return {
     title: `Project: ${projectName} | Avilio Muñoz`,
-    description: project.description_small,
+    description: project?.description_small,
   };
 }
 
