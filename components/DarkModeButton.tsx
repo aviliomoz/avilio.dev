@@ -6,9 +6,7 @@ import { useEffect, useState } from "react";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
 export const DarkModeButton = () => {
-  const [darkMode, setDarkMode] = useState(
-    "dark" in document.documentElement.classList
-  );
+  const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
     if (darkMode) {
