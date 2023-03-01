@@ -63,7 +63,7 @@ export default async function ProjectPage({ params: { name } }: Props) {
           </a>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10">
         <picture className="w-full h-52 sm:h-80 md:h-96 lg:h-64 relative">
           <Image
             src={project.cover}
@@ -97,7 +97,7 @@ export default async function ProjectPage({ params: { name } }: Props) {
       <h2 className="text-center font-semibold text-xl mt-14 mb-8 dark:text-white">
         Features
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-10 md:gap-y-14 p-4 md:p-10 border rounded-md">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-10 md:gap-y-14 md:p-10 md:border rounded-md">
         {project.features.map((feature, index) => {
           return <FeatureCard key={index} feature={feature} />;
         })}

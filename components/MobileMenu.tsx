@@ -33,17 +33,17 @@ export const MobileMenu = ({ routes }: Props) => {
       <div className="flex items-center space-x-4">
         <button onClick={() => setMenuIsOpen(!menuIsOpen)}>
           {menuIsOpen ? (
-            <MdClose className="text-3xl fill-gray-800" />
+            <MdClose className="text-3xl fill-gray-800 dark:fill-white" />
           ) : (
-            <MdMenu className="text-3xl fill-gray-800" />
+            <MdMenu className="text-3xl fill-gray-800 dark:fill-white" />
           )}
         </button>
-        <h2 className="font-bold text-lg text-gray-800">
+        <h2 className="font-bold text-lg text-gray-800 dark:text-white">
           {routename.charAt(1).toUpperCase() + routename.slice(2)}
         </h2>
       </div>
       {menuIsOpen && (
-        <ul className="absolute border rounded-md p-4 flex flex-col space-y-2 z-20 bg-white mt-2 w-28">
+        <ul className="absolute border rounded-md p-4 flex flex-col space-y-2 z-20 bg-white mt-2 w-28 dark:bg-gray-900">
           {routes.map((route) => {
             return (
               <li key={route.path} onClick={() => setMenuIsOpen(false)}>
