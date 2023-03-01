@@ -21,13 +21,13 @@ export async function generateMetadata({
 }: Props): Promise<Metadata> {
   const project = await getProjectByName(name);
 
-  const projectNameCapitalLetter = project?.name.charAt(0).toUpperCase() || "";
-  const projectNameRest = project?.name.slice(1) || "";
+  const projectNameCapitalLetter = project.name.charAt(0).toUpperCase() || "";
+  const projectNameRest = project.name.slice(1) || "";
   const projectName = projectNameCapitalLetter + projectNameRest;
 
   return {
     title: `Project: ${projectName} | Avilio Muñoz`,
-    description: project?.description_small,
+    description: project.description_small,
   };
 }
 
@@ -73,7 +73,9 @@ export default async function ProjectPage({ params: { name } }: Props) {
           />
         </picture>
         <div className="flex flex-col justify-center w-full">
-          <h2 className="font-semibold text-xl mb-4 dark:text-white">Description</h2>
+          <h2 className="font-semibold text-xl mb-4 dark:text-white">
+            Description
+          </h2>
           <p className="dark:text-white">{project.description_large}</p>
           <div className="flex flex-col gap-4 sm:flex-row items-center mt-6">
             <h3 className="font-medium dark:text-white">Stack:</h3>
@@ -92,7 +94,9 @@ export default async function ProjectPage({ params: { name } }: Props) {
           </div>
         </div>
       </div>
-      <h2 className="text-center font-semibold text-xl mt-14 mb-8 dark:text-white">Features</h2>
+      <h2 className="text-center font-semibold text-xl mt-14 mb-8 dark:text-white">
+        Features
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-10 md:gap-y-14 p-4 md:p-10 border rounded-md">
         {project.features.map((feature, index) => {
           return <FeatureCard key={index} feature={feature} />;

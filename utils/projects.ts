@@ -9,10 +9,9 @@ export const getProjects = async (): Promise<Project[]> => {
   return projects;
 };
 
-export const getProjectByName = async (
-  name: string
-): Promise<Project | undefined> => {
-  const projects = await getProjects();
+export const getProjectByName = async (name: string): Promise<Project> => {
+  const data = await fetch(api_route + `/${name}`);
+  const project: Project = await data.json();
 
-  return projects.find((project) => project.name === name);
+  return project;
 };
